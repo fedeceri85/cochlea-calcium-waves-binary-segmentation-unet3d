@@ -1,0 +1,13 @@
+monai
+PyYAML
+pandas
+openpyxl
+matplotlib
+tqdm
+tifffile
+scipy
+scikit-image
+scikit-learn
+jupyter
+zarr
+ome-zarr

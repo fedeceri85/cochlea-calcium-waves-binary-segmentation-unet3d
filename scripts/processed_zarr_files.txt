@@ -1,0 +1,15 @@
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/1_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/1_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/3_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/5_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/2/processedMovies/1-jumpCorrected.ome.zarr
