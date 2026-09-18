@@ -13,3 +13,172 @@
 /Volumes/Data/Users/Francesca/Data/2024/2024_07_05_Pax2-GCaMP6f_P8_in vivo_injectable anaesthetic/5_001/processedMovies/1-jumpCorrected.ome.zarr
 /Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/1/processedMovies/1-jumpCorrected.ome.zarr
 /Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/8/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/8_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/9/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_07_08_Pax2-GCaMP6f_P9_in vivo_injectable anaesthetic/10/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/7_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/8/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/9/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/10/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_01_Pax2-GCaMP6f_injectable anaesthesia/12/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/3_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_11_07_Pax2-GCaMP6f_in vivo_P8_injectable anaesthetic/3_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_10_17_Pax2-GCaMP6f_P5_in vivo_broken/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_11_20_Pax2-GCaMP6f_P9_in vivo_broken/4_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_05_01_Pax2-GCaMP6f_P6_in vivo_broken/1_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_05_02_Pax2-GCaMP6f_P7_in vivo_broken/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_05_02_Pax2-GCaMP6f_P7_in vivo_broken/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_05_02_Pax2-GCaMP6f_P7_in vivo_broken/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_07_Pax2-cre-GCaMP6f_P6_in vivo_16X/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_07_Pax2-cre-GCaMP6f_P6_in vivo_16X/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_08_Pax2-cre-GCaMP6f_P7_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_08_Pax2-cre-GCaMP6f_P7_in vivo/3_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_08_Pax2-cre-GCaMP6f_P7_in vivo/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_23_Pax2-Cre-GCaMP6f_P7_in vivo/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_23_Pax2-Cre-GCaMP6f_P7_in vivo/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_11_23_Pax2-Cre-GCaMP6f_P7_in vivo/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_09_Pax2-Cre-GCaMP6f_P6_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_09_Pax2-Cre-GCaMP6f_P6_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_09_Pax2-Cre-GCaMP6f_P6_in vivo/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_13_Pax2Cre-GCaMP6f_P8_in vivo/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_13_Pax2Cre-GCaMP6f_P8_in vivo/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_13_Pax2Cre-GCaMP6f_P8_in vivo/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_13_Pax2Cre-GCaMP6f_P8_in vivo/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2022/2022_12_13_Pax2Cre-GCaMP6f_P8_in vivo/9/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_01_26_Pax2-Cre-GCaMP6f_P9_in vivo/1_000/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_01_26_Pax2-Cre-GCaMP6f_P9_in vivo/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/1_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/3_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/3_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/3_004/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_02_Pax2-Cre-GCaMP6f_P9_in vivo/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/1_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/1_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/2_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4_004/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_08_Pax2-Cre-GCaMP6f_P8_in vivo/4_006/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/8/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/8_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/8_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/9/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/10/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/12/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/12_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/12_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/14/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_10_Pax2Cre-GCaMP6f_P4_in vivo/14_000/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/2_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/4_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_02_14_Pax2Cre-GCaMP6f_P5_in vivo/4_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_07_Pax2Cre-GCaMP6f_P3_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_07_Pax2Cre-GCaMP6f_P3_in vivo/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_07_Pax2Cre-GCaMP6f_P3_in vivo/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_07_Pax2Cre-GCaMP6f_P3_in vivo/2_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/1_000/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_007/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_008/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_010/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_011/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_14_Pax2-GCaMP6f_P6_in vivo/2_012/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_22_Pax2-GCaMP6f_P4_in vivo/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_22_Pax2-GCaMP6f_P4_in vivo/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_22_Pax2-GCaMP6f_P4_in vivo/2_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2023/2023_03_22_Pax2-GCaMP6f_P4_in vivo/2_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/1_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P9_in vivo_ACP+isoflurane/8/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_10_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/7_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/8/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/8_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/9/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2024/2024_12_17_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/9_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/1/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/1_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/3_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_13_Pax2-GCaMP6f_P7_in vivo_ACP+isoflurane/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/2/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/2_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/3/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/4_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/5/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/6/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/6_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/6_002/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/6_003/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/7/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/7_001/processedMovies/1-jumpCorrected.ome.zarr
+/Volumes/Data/Users/Francesca/Data/2025/2025_01_14_Pax2-GCaMP6f_P8_in vivo_ACP+isoflurane/8/processedMovies/1-jumpCorrected.ome.zarr
