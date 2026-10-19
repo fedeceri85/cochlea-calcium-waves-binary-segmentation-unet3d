@@ -2,7 +2,7 @@
 data:
   excel_folder: ./experiment_lists
   drive: /Volumes/data
-  data_dir: data_sgn
+  data_dir: data
   maskfilename: SGN ROIs.tif
   copy_type: local_no_copy
   overwrite: false
@@ -11,7 +11,12 @@ data:
   column: UniqueID
   test_size: 0.2
   random_state: 42
-  patch_size: [256, 256]
+  patch_size: [32, 128, 128]
+  foreground_probability: [0.75]
+  min_waves: 1
+  min_foreground_fraction: 0.0
+  background_max_fraction: 0.0
+  max_attempts: 100
   num_samples: 8
   pos: 3
   neg: 1

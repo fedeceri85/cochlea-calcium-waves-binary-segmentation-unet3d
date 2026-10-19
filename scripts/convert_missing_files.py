@@ -20,7 +20,7 @@ def main():
 
     alldata = alldata[alldata['discard2']!=1]
 
-    dfdata = data.generate_dataset(alldata)
+    dfdata = data.generate_conversion_dataset(alldata)
 
     dfdata = dfdata[dfdata['TIFF_file'].isnull()]
 
