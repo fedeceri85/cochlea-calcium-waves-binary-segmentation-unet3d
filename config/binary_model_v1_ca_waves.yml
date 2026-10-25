@@ -46,10 +46,12 @@ augmentation:
   intensity_shift_offsets: 0.10
 
 training:
-  epochs: 400
+  epochs: 5
   batch_size: 2
   val_batch_size: 1
-  num_workers: 0
+  num_workers: 2
+  # Full validation movies are too large for Windows worker shared-memory mappings.
+  val_num_workers: 0
   shuffle_train: true
   shuffle_val: false
   device: auto

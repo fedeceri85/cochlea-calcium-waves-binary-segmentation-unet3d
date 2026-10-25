@@ -321,11 +321,20 @@ def train_test_split(dfdata, column='UniqueID', test_size=0.2, random_state=42, 
 from monai.data import Dataset, DataLoader
 def create_datasets_and_loaders(train_data, val_data, train_transforms, val_transforms,
                                 batch_size=2, num_workers=0, val_batch_size=1,
-                                shuffle_train=True, shuffle_val=False):
+                                shuffle_train=True, shuffle_val=False,
+                                val_num_workers=None):
+    if val_num_workers is None:
+        val_num_workers = num_workers
+
     train_ds = Dataset(data=train_data, transform=train_transforms)
     train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=shuffle_train, num_workers=num_workers)
 
     val_ds = Dataset(data=val_data,transform=val_transforms)
-    val_loader = DataLoader(val_ds, batch_size=val_batch_size, shuffle=shuffle_val, num_workers=num_workers)
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=val_batch_size,
+        shuffle=shuffle_val,
+        num_workers=val_num_workers,
+    )
 
     return train_ds, train_loader, val_ds, val_loader

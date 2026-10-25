@@ -117,6 +117,7 @@ def main(config_path):
         batch_size=training_config["batch_size"],
         val_batch_size=training_config["val_batch_size"],
         num_workers=training_config["num_workers"],
+        val_num_workers=training_config.get("val_num_workers", training_config["num_workers"]),
         shuffle_train=training_config["shuffle_train"],
         shuffle_val=training_config["shuffle_val"],
     )
@@ -219,6 +220,7 @@ def main(config_path):
             f"Dice={val_dice:.4f}"
         )
 
+        print(f"Validation on epoch {epoch}")
         if val_dice > best_dice:
             best_dice = val_dice
             best_epoch = epoch
