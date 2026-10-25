@@ -1,15 +1,21 @@
+import argparse
 import sys
+import os
+
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from src.config import load_yaml_config
 import torch
-import os
 import pandas as pd
-
 from src import data, transforms
 from src.model import build_binary_model
+from src.train import train_one_epoch_binary
+from src.validate import validate_binary
+
+from monai.losses import DiceLoss
+from monai.metrics import DiceMetric
 
 DATA_DIR = './data'
 
@@ -31,10 +37,6 @@ def main(config_path):
     if not os.path.isabs(data_dir):
         data_dir = os.path.join(PROJECT_ROOT, data_dir)
 
-
-    excel_folder = data_config["excel_folder"]
-    if not os.path.isabs(excel_folder):
-        excel_folder = os.path.join(PROJECT_ROOT, excel_folder)
 
     split_json_path = data_config["split_file"]
     if not os.path.isabs(split_json_path):
@@ -65,7 +67,14 @@ def main(config_path):
     
     print("Loading data...")
     dfdata = pd.read_csv(os.path.join(data_dir, 'dfdata.csv'))
-
+    if os.name == "nt":  # Windows
+        for column in ("Folder", "image", "label", "waves"):
+            if column in dfdata.columns:
+                dfdata[column] = dfdata[column].str.replace(
+                    r"^/Volumes/Data/Users(?=/|$)",
+                    "Z:/Users",
+                    regex=True,
+                )
 
     print("Splitting data into training and validation sets...")
     train_data, val_data = data.train_test_split(
@@ -123,3 +132,119 @@ def main(config_path):
         num_res_units=model_config["num_res_units"],
     ).to(device)
     print("Model architecture:", model_config["architecture"])
+
+
+    print("Setting up optimizer and loss function")
+    if loss_config["name"]!= 'DiceLoss':
+        raise NotImplementedError("Only Dice Loss is supported at the moment.")
+    loss_function = DiceLoss(sigmoid = loss_config["sigmoid"])
+
+    if optimizer_config["name"]!="Adam":
+        raise NotImplementedError("Only Adam optimizer is supported at the moment")
+    optimizer = torch.optim.Adam(model.parameters(),lr=optimizer_config['learning_rate'])
+    
+    print("Loading checkpoint if available")
+    #########
+    #Add checkpoint loading here
+    #########
+    start_epoch = 0
+    best_dice = float("-inf")
+    best_epoch = None
+    if os.path.exists(checkpoint_path):
+        checkpoint = torch.load(checkpoint_path)
+        model.load_state_dict(checkpoint["model_state_dict"])
+        optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+        start_epoch = checkpoint["epoch"] + 1
+        best_dice = checkpoint["best_dice"]
+        best_epoch = checkpoint["best_epoch"]
+
+        if os.path.exists(best_model_path):
+            best_model = torch.load(best_model_path)
+            best_dice = best_model["best_dice"]
+            best_epoch = checkpoint["best_epoch"]
+
+        print(f"Loaded checkpoint from epoch {start_epoch} with best dice {best_dice} at epoch {best_epoch}")
+        for state in optimizer.state.values():
+            for key, value in state.items():
+                if torch.is_tensor(value):
+                    state[key] = value.to(device)
+
+    else:
+        print("Training from scratch.")
+
+    
+    if metric_config["name"] != "DiceMetric":
+        raise ValueError(f"Unsupported metric.name: {metric_config['name']}")
+    dice_metric = DiceMetric(
+        include_background=metric_config["include_background"],
+        reduction=metric_config["reduction"],
+    )
+
+    checkpoint_dir = os.path.dirname(checkpoint_path)
+    best_model_dir = os.path.dirname(best_model_path)
+    if checkpoint_dir:
+        os.makedirs(checkpoint_dir, exist_ok=True)
+    if best_model_dir:
+        os.makedirs(best_model_dir, exist_ok=True)
+
+    num_epochs = training_config["epochs"]
+    if start_epoch >= num_epochs:
+        print(f"Checkpoint is already at epoch {start_epoch}; configured epochs is {num_epochs}. Nothing to train.")
+        return
+
+    print("Starting training...")
+    for epoch in range(start_epoch,num_epochs):
+        train_loss = train_one_epoch_binary(model,
+            train_loader,
+            optimizer,
+            loss_function,
+            device
+        )
+        
+        val_dice = validate_binary(
+            model,
+            val_loader,
+            dice_metric,
+            device,
+            validation_config["prediction_sigmoid"],
+            validation_config["prediction_threshold"],
+            validation_config["label_threshold"],
+            validation_config["roi_size"],
+            validation_config["sw_batch_size"]
+        )
+
+        print(
+            f"Epoch {epoch + 1:3d} "
+            f"Loss={train_loss:.4f} "
+            f"Dice={val_dice:.4f}"
+        )
+
+        if val_dice > best_dice:
+            best_dice = val_dice
+            best_epoch = epoch
+            torch.save({
+                "epoch": epoch,
+                "model_state_dict": model.state_dict(),
+                "optimizer_state_dict": optimizer.state_dict(),
+                "best_dice": best_dice,
+                "config_path": config_path,
+            }, best_model_path)
+            print("Saved new best model")
+
+        torch.save({
+            "epoch": epoch,
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "best_dice": best_dice,
+            "best_epoch": best_epoch,
+            "config_path": config_path,
+        }, checkpoint_path)
+
+
+    
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("config")
+    args = parser.parse_args()
+    main(args.config)
