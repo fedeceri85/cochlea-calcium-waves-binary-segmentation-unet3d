@@ -1,0 +1,90 @@
+# U-Net with all augmentation.
+data:
+  excel_folder: ./experiment_lists
+  drive: /Volumes/data
+  data_dir: data
+  maskfilename: SGN ROIs.tif
+  copy_type: local_no_copy
+  overwrite: false
+  split_file: splits/binary_split_v1_ca_waves.json
+  save_split_json: true
+  column: UniqueID
+  test_size: 0.2
+  random_state: 42
+  patch_size: [128, 128, 128]
+  foreground_probability: 0.75
+  min_waves: 1
+  min_foreground_fraction: 0.0
+  background_max_fraction: 0.0
+  max_attempts: 100
+  num_samples: 8
+  pos: 3
+  neg: 1
+  annotation_indices: [1,2,5]
+  exclusions: None # ['ChAT', 'iAChSnFR', 'iGluSnFR', 'IHC recordings annotated', 'NeuroD_SGN_OHCs', 'Pax2', 'SNAP25', 'Snap25','Cav','TMEM','Otof','FVB','Atoh1selected']
+  inclusions: None
+  require_annotations: true
+  load_local_dataset: false  
+  generate_heatmaps: true
+  heatmap_sigma: 2
+  overwrite_heatmaps: false
+  label_suffix: '_Masks'  # Use the center heatmap as the label for training
+
+augmentation:
+  flip_vertical: true
+  flip_vertical_prob: 0.5
+  flip_horizontal: true
+  flip_horizontal_prob: 0.5
+  rotate90: true
+  rotate90_prob: 0.5
+  rotate90_max_k: 3
+  intensity_scale: true
+  intensity_scale_prob: 0.5
+  intensity_scale_factors: 0.15
+  intensity_shift: true
+  intensity_shift_prob: 0.5
+  intensity_shift_offsets: 0.10
+
+training:
+  epochs: 100
+  batch_size: 4
+  val_batch_size: 1
+  num_workers: 8
+  # Full validation movies are too large for Windows worker shared-memory mappings.
+  val_num_workers: 0
+  shuffle_train: true
+  shuffle_val: false
+  device: auto
+
+loss:
+  name: Dice+BCE
+  sigmoid: true
+  pos_weight: 20.0
+
+optimizer:
+  name: Adam
+  learning_rate: 0.0003
+
+metric:
+  name: DiceMetric
+  include_background: false
+  reduction: mean
+
+validation:
+  roi_size: [128, 128, 128]
+  sw_batch_size: 16
+  prediction_sigmoid: true
+  prediction_threshold: 0.5
+  label_threshold: 0.5
+
+model:
+  architecture: unet
+  spatial_dims: 3
+  in_channels: 1
+  out_channels: 1
+  channels: [16, 32, 64, 128, 256]
+  strides: [2, 2, 2, 2]
+  num_res_units: 2
+  checkpoint_path: checkpoints/checkpoint_binary_v5_synaptic.pth
+  best_model_path: checkpoints/best_model_binary_v5_synaptic.pth
+  progress_path: checkpoints/runs/binary_model_v5

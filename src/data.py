@@ -322,13 +322,28 @@ from monai.data import Dataset, DataLoader
 def create_datasets_and_loaders(train_data, val_data, train_transforms, val_transforms,
                                 batch_size=2, num_workers=0, val_batch_size=1,
                                 shuffle_train=True, shuffle_val=False,
-                                val_num_workers=None):
+                                val_num_workers=None, train_samples_per_movie=1,):
     if val_num_workers is None:
         val_num_workers = num_workers
+    if train_samples_per_movie < 1:
+        raise ValueError(
+            "train_samples_per_movie must be at least 1"
+        )
 
-    train_ds = Dataset(data=train_data, transform=train_transforms)
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=shuffle_train, num_workers=num_workers)
+    expanded_train_data = [
+        record.copy()
+        for record in train_data
+        for _ in range(train_samples_per_movie)
+    ]
 
+    train_ds = Dataset(
+        data=expanded_train_data,
+        transform=train_transforms,
+    )
+
+    #train_ds = Dataset(data=train_data, transform=train_transforms)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=shuffle_train, num_workers=num_workers,
+                              pin_memory=True,persistent_workers=num_workers > 0)
     val_ds = Dataset(data=val_data,transform=val_transforms)
     val_loader = DataLoader(
         val_ds,

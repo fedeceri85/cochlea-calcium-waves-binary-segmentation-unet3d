@@ -11,7 +11,7 @@ data:
   column: UniqueID
   test_size: 0.2
   random_state: 42
-  patch_size: [32, 128, 128]
+  patch_size: [128, 128, 128]
   foreground_probability: 0.75
   min_waves: 1
   min_foreground_fraction: 0.0
@@ -46,10 +46,10 @@ augmentation:
   intensity_shift_offsets: 0.10
 
 training:
-  epochs: 5
-  batch_size: 2
+  epochs: 100
+  batch_size: 4
   val_batch_size: 1
-  num_workers: 2
+  num_workers: 8
   # Full validation movies are too large for Windows worker shared-memory mappings.
   val_num_workers: 0
   shuffle_train: true
@@ -71,8 +71,8 @@ metric:
   reduction: mean
 
 validation:
-  roi_size: [32, 256, 256]
-  sw_batch_size: 4
+  roi_size: [128, 128, 128]
+  sw_batch_size: 16
   prediction_sigmoid: true
   prediction_threshold: 0.5
   label_threshold: 0.5

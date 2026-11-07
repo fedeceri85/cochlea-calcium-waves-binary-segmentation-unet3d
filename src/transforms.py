@@ -86,6 +86,56 @@ class RandLoadWavePatchd(RandomizableTransform, MapTransform):
     def randomize(self, data=None):
         self._foreground = self.R.random_sample() < self.foreground_probability
 
+    def _find_foreground_coordinate(self, label, wave_id, box):
+        """Choose an actual wave voxel without materialising its full bbox.
+
+        Scan one time plane at a time and use weighted reservoir sampling so
+        every foreground voxel in the bounding box has equal probability of
+        being selected.
+        """
+        selected = None
+        foreground_seen = 0
+        (t0, t1), (y0, y1), (x0, x1) = box
+
+        for t in range(int(t0), int(t1)):
+            plane = np.asarray(label[t, y0:y1, x0:x1])
+            coordinates = np.argwhere(plane == int(wave_id))
+            count = len(coordinates)
+            if count == 0:
+                continue
+
+            new_total = foreground_seen + count
+            if self.R.random_sample() < count / new_total:
+                yx = coordinates[self.R.randint(count)]
+                selected = (int(t), int(y0 + yx[0]), int(x0 + yx[1]))
+            foreground_seen = new_total
+
+        return selected
+
+    def _return_patch(self, d, image, label, starts):
+        selection = tuple(
+            slice(start, start + size)
+            for start, size in zip(starts, self.patch_size)
+        )
+        label_patch = np.array(label[selection], copy=True)
+        fraction = np.count_nonzero(label_patch > 0) / label_patch.size
+        ids = np.unique(label_patch)
+        ids = ids[ids > 0]
+
+        if self._foreground:
+            valid = len(ids) >= self.min_waves and fraction >= self.min_foreground_fraction
+        else:
+            valid = fraction <= self.background_max_fraction
+        if not valid:
+            return None
+
+        d[self.image_key] = image[selection]
+        d[self.label_key] = label_patch
+        d["patch_start"] = starts
+        d["patch_is_foreground"] = self._foreground
+        d.pop(self.index_key, None)
+        return d
+
     def __call__(self, data):
         d = dict(data)
         image = d[self.image_key]
@@ -130,25 +180,32 @@ class RandLoadWavePatchd(RandomizableTransform, MapTransform):
             else:
                 starts = tuple(self.R.randint(dim - size + 1)
                                for dim, size in zip(shape, self.patch_size))
-            selection = tuple(slice(start, start + size)
-                              for start, size in zip(starts, self.patch_size))
-            label_patch = np.array(label[selection], copy=True)
-            fraction = np.count_nonzero(label_patch > 0) / label_patch.size
-            ids = np.unique(label_patch)
-            ids = ids[ids > 0]
-            if self._foreground:
-                if len(ids) < self.min_waves or fraction < self.min_foreground_fraction:
-                    continue
-            elif fraction > self.background_max_fraction:
-                continue
-            # Read image pixels only after the label crop passes the checks.
-            d[self.image_key] = image[selection]
-            d[self.label_key] = label_patch
-            d["patch_start"] = starts
-            d["patch_is_foreground"] = self._foreground
-            # Bounding boxes are only needed to select the patch.
-            d.pop(self.index_key, None)
-            return d
+            result = self._return_patch(d, image, label, starts)
+            if result is not None:
+                return result
+
+        # Sparse waves can make random rejection sampling unreliable. Fall
+        # back to an exact, plane-wise search for a voxel of the selected wave.
+        if self._foreground:
+            wave_id = wave_ids[wave_number]
+            center = self._find_foreground_coordinate(
+                label, wave_id, boxes[wave_number]
+            )
+            if center is None:
+                raise RuntimeError(
+                    f"Wave {wave_id} has no matching label voxels inside "
+                    f"its bounding box {boxes[wave_number].tolist()}. "
+                    "Regenerate 3Droi_bboxes.txt from the current label TIFF."
+                )
+
+            starts = tuple(
+                int(np.clip(c - size // 2, 0, dim - size))
+                for c, size, dim in zip(center, self.patch_size, shape)
+            )
+            result = self._return_patch(d, image, label, starts)
+            if result is not None:
+                return result
+
         kind = "foreground" if self._foreground else "background"
         raise RuntimeError(
             f"No valid {kind} patch after {self.max_attempts} attempts. "
@@ -158,14 +215,15 @@ class RandLoadWavePatchd(RandomizableTransform, MapTransform):
 
 class BinarizeMaskd(MapTransform):
 
-    def __init__(self, keys):
+    def __init__(self, keys, dtype=np.float32):
         super().__init__(keys)
+        self.dtype = dtype
 
     def __call__(self, data):
         d = dict(data)
 
         for key in self.keys:
-            d[key] = (d[key] > 0).astype(np.float32)
+            d[key] = (d[key] > 0).astype(self.dtype, copy=False)
 
         return d
 
@@ -248,10 +306,11 @@ def get_transforms_binary_classification(
 
         InitMoviePatchd(materialize = True),
         DeleteItemsd(keys=["waves"]),
-        BinarizeMaskd(keys = ["label"]),
+        BinarizeMaskd(keys=["label"], dtype=np.bool_),
         EnsureChannelFirstd(keys=["image", "label"],channel_dim = "no_channel"),
         #ScaleIntensityd(keys="image"), add scaleintensity to sliding_window_inference
-        EnsureTyped(keys=["image", "label"], dtype=torch.float32),
+        EnsureTyped(keys=["image"], dtype=torch.float32),
+        EnsureTyped(keys=["label"], dtype=torch.bool),
     ]
 
     val_transforms = Compose(val_transforms_list)    
