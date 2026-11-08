@@ -85,6 +85,6 @@ model:
   channels: [16, 32, 64, 128, 256]
   strides: [2, 2, 2, 2]
   num_res_units: 2
-  checkpoint_path: checkpoints/checkpoint_binary_v5_synaptic.pth
-  best_model_path: checkpoints/best_model_binary_v5_synaptic.pth
-  progress_path: checkpoints/runs/binary_model_v5
+  checkpoint_path: checkpoints/checkpoint_binary_v2_cawaves.pth
+  best_model_path: checkpoints/best_model_binary_v2_cawaves.pth
+  progress_path: checkpoints/runs/binary_model_v2
