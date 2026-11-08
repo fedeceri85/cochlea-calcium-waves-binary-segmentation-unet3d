@@ -1,6 +1,6 @@
 # 3D U-Net for Cochlear Calcium Wave Segmentation
 
-
+[![Hugging Face model](https://img.shields.io/badge/Hugging%20Face-Model-FFD21E?logo=huggingface)](https://huggingface.co/fedeceri/cochlea-calcium-waves-binary-segmentation-unet3d)
 
 MONAI/PyTorch pipeline for segmenting calcium waves in the neonatal cochlea. The model is trained on GCaMP-labelled cochleae from in vivo two-photon imaging experiments ([paper](https://www.nature.com/articles/s41467-024-55519-w)).
 
