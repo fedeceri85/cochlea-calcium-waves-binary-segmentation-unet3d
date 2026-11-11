@@ -16,11 +16,15 @@ from src.validate import validate_binary
 
 from monai.losses import DiceLoss
 from monai.metrics import DiceMetric
+from torch.nn import BCEWithLogitsLoss
+from src.losses import DiceBCELoss
+from torch.utils.tensorboard import SummaryWriter
 
+import time
 DATA_DIR = './data'
-
+import argparse
 def main(config_path):
-
+    parser = argparse.ArgumentParser()
     # Load configs
     config = load_yaml_config(config_path)
     data_config = config["data"]
@@ -72,7 +76,7 @@ def main(config_path):
             if column in dfdata.columns:
                 dfdata[column] = dfdata[column].str.replace(
                     r"^/Volumes/Data/Users(?=/|$)",
-                    "Z:/Users",
+                    "D:/Users/Federico",
                     regex=True,
                 )
 
@@ -117,8 +121,10 @@ def main(config_path):
         batch_size=training_config["batch_size"],
         val_batch_size=training_config["val_batch_size"],
         num_workers=training_config["num_workers"],
+        val_num_workers=training_config.get("val_num_workers", training_config["num_workers"]),
         shuffle_train=training_config["shuffle_train"],
         shuffle_val=training_config["shuffle_val"],
+        train_samples_per_movie=data_config.get("num_samples",1)
     )
 
     print("Building model...")
@@ -135,9 +141,15 @@ def main(config_path):
 
 
     print("Setting up optimizer and loss function")
-    if loss_config["name"]!= 'DiceLoss':
+    if loss_config["name"]== "DiceLoss":
+        loss_function = DiceLoss(sigmoid = loss_config["sigmoid"])
+    elif  loss_config["name"]== "BCELoss":
+        loss_function = BCEWithLogitsLoss()
+    elif  loss_config["name"]== "Dice+BCE":
+        loss_function = DiceBCELoss(sigmoid= loss_config["sigmoid"])
+    else:
         raise NotImplementedError("Only Dice Loss is supported at the moment.")
-    loss_function = DiceLoss(sigmoid = loss_config["sigmoid"])
+
 
     if optimizer_config["name"]!="Adam":
         raise NotImplementedError("Only Adam optimizer is supported at the moment")
@@ -154,6 +166,8 @@ def main(config_path):
         checkpoint = torch.load(checkpoint_path)
         model.load_state_dict(checkpoint["model_state_dict"])
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+        for param_group in optimizer.param_groups:
+          param_group["lr"] = optimizer_config["learning_rate"]
         start_epoch = checkpoint["epoch"] + 1
         best_dice = checkpoint["best_dice"]
         best_epoch = checkpoint["best_epoch"]
@@ -192,6 +206,9 @@ def main(config_path):
         print(f"Checkpoint is already at epoch {start_epoch}; configured epochs is {num_epochs}. Nothing to train.")
         return
 
+
+    writer = SummaryWriter(model_config["progress_path"])
+
     print("Starting training...")
     for epoch in range(start_epoch,num_epochs):
         train_loss = train_one_epoch_binary(model,
@@ -201,7 +218,7 @@ def main(config_path):
             device
         )
         
-        val_dice = validate_binary(
+        val_dice,val_precision, val_recall = validate_binary(
             model,
             val_loader,
             dice_metric,
@@ -219,6 +236,7 @@ def main(config_path):
             f"Dice={val_dice:.4f}"
         )
 
+        print(f"Validation on epoch {epoch + 1}")
         if val_dice > best_dice:
             best_dice = val_dice
             best_epoch = epoch
@@ -240,11 +258,40 @@ def main(config_path):
             "config_path": config_path,
         }, checkpoint_path)
 
+        writer.add_scalar(
+            "loss/train",
+            train_loss,
+            epoch,
+        )
 
-    
+        writer.add_scalar(
+            "dice/validation",
+            val_dice,
+            epoch,
+        )
+
+        writer.add_scalar(
+            "optimizer/learning_rate",
+            optimizer.param_groups[0]["lr"],
+            epoch,
+        )
+        writer.add_scalar(
+            "precision/validation",
+            val_precision,
+            epoch
+        )
+        writer.add_scalar(
+            "recall/validation",
+            val_recall,
+            epoch
+        )
+    writer.close()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("config")
     args = parser.parse_args()
+    start = time.perf_counter()
     main(args.config)
+    total_time = time.perf_counter() - start
+    print(f"Total elapsed time:{total_time:.2f} s")
